@@ -48,8 +48,8 @@ public class App
            This change should be made in a branch made off of release/1.0 called 
            feature/DisplayPathHeader.
         */
-           
-        String body = "<h1>Gitflow Tutorial</h1>";
+        String somepath = in.readLine().split(" ")[1]; // get "/somepath" from BufferedReader
+        String body = "<" + somepath + ">Gitflow Tutorial</" + somepath + ">";
 
         out.write("HTTP/1.1 200 OK\r\n");
         out.write(String.format("Content-Length: %d\r\n", body.length()));
